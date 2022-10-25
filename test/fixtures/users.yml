@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rol: 1
+  nombre: MyString
+  apellido: MyString
+  DNI: 1
+  email: MyString
+  estado: 1
+  liscencia_url: MyString
+  cedula_azul_url: MyString
+  posicion_id: 1
+
+two:
+  rol: 1
+  nombre: MyString
+  apellido: MyString
+  DNI: 1
+  email: MyString
+  estado: 1
+  liscencia_url: MyString
+  cedula_azul_url: MyString
+  posicion_id: 1
