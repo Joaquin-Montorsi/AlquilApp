@@ -14,15 +14,15 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New user"
 
-    fill_in "Dni", with: @user.DNI
-    fill_in "Apellido", with: @user.apellido
-    fill_in "Cedula azul url", with: @user.cedula_azul_url
+    fill_in "Bluecard url", with: @user.blueCard_url
+    fill_in "Document", with: @user.document
     fill_in "Email", with: @user.email
-    fill_in "Estado", with: @user.estado
-    fill_in "Liscencia url", with: @user.liscencia_url
-    fill_in "Nombre", with: @user.nombre
-    fill_in "Posicion", with: @user.posicion_id
+    fill_in "Lastname", with: @user.lastName
+    fill_in "License url", with: @user.license_url
+    fill_in "Name", with: @user.name
+    fill_in "Position", with: @user.position_id
     fill_in "Rol", with: @user.rol
+    fill_in "State", with: @user.state
     click_on "Create User"
 
     assert_text "User was successfully created"
@@ -33,15 +33,15 @@ class UsersTest < ApplicationSystemTestCase
     visit user_url(@user)
     click_on "Edit this user", match: :first
 
-    fill_in "Dni", with: @user.DNI
-    fill_in "Apellido", with: @user.apellido
-    fill_in "Cedula azul url", with: @user.cedula_azul_url
+    fill_in "Bluecard url", with: @user.blueCard_url
+    fill_in "Document", with: @user.document
     fill_in "Email", with: @user.email
-    fill_in "Estado", with: @user.estado
-    fill_in "Liscencia url", with: @user.liscencia_url
-    fill_in "Nombre", with: @user.nombre
-    fill_in "Posicion", with: @user.posicion_id
+    fill_in "Lastname", with: @user.lastName
+    fill_in "License url", with: @user.license_url
+    fill_in "Name", with: @user.name
+    fill_in "Position", with: @user.position_id
     fill_in "Rol", with: @user.rol
+    fill_in "State", with: @user.state
     click_on "Update User"
 
     assert_text "User was successfully updated"

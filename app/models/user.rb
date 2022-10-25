@@ -1,7 +1,6 @@
 class User < ApplicationRecord
-    belongs_to :posicion, dependent: :destroy
-    has_one :auto
-    has_many :tarjetas, dependent: :destroy
-    has_many :alquilers
-    has_many :reportes
+    belongs_to :position
+    has_many :card
+    has_many :rental
+    has_many :report
 end

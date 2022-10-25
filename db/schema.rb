@@ -10,67 +10,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_25_013621) do
-  create_table "alquilers", force: :cascade do |t|
-    t.float "precio"
-    t.datetime "vencimiento"
+ActiveRecord::Schema[7.0].define(version: 2022_10_25_223141) do
+  create_table "cards", force: :cascade do |t|
+    t.integer "cardNumber"
+    t.date "expires"
     t.integer "user_id"
-    t.integer "auto_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "autos", force: :cascade do |t|
-    t.string "modelo"
-    t.string "marca"
-    t.string "patente"
+  create_table "cars", force: :cascade do |t|
+    t.string "model"
+    t.string "brand"
+    t.string "license"
     t.string "color"
     t.string "img_url"
-    t.integer "nro_puertas"
-    t.integer "nro_asientos"
-    t.integer "estado"
-    t.boolean "encendido"
-    t.float "velocidad"
-    t.integer "cant_combustible"
-    t.integer "posicion_id"
-    t.integer "user_id"
+    t.integer "doors"
+    t.integer "seats"
+    t.integer "state"
+    t.boolean "engine"
+    t.integer "fuel"
+    t.integer "position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "posicions", force: :cascade do |t|
+  create_table "positions", force: :cascade do |t|
     t.float "x"
     t.float "y"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "reportes", force: :cascade do |t|
-    t.text "descripcion"
-    t.string "user_id"
-    t.string "auto_id"
+  create_table "rentals", force: :cascade do |t|
+    t.float "price"
+    t.datetime "expires"
+    t.integer "user_id"
+    t.integer "car_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "tarjeta", force: :cascade do |t|
-    t.integer "nro_tarjeta"
-    t.date "fecha_caducidad"
-    t.integer "user_id"
+  create_table "reports", force: :cascade do |t|
+    t.text "description"
+    t.string "user_id"
+    t.string "car_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.integer "rol"
-    t.string "nombre"
-    t.string "apellido"
-    t.integer "DNI"
+    t.string "name"
+    t.string "lastName"
+    t.integer "document"
     t.string "email"
-    t.integer "estado"
-    t.string "liscencia_url"
-    t.string "cedula_azul_url"
-    t.integer "posicion_id"
+    t.integer "state"
+    t.string "license_url"
+    t.string "blueCard_url"
+    t.integer "position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

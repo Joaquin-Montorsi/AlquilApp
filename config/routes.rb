@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  resources :reports
   resources :users
-  resources :alquilers
-  resources :reportes
-  resources :tarjeta
-  resources :posicions
-  resources :autos
+  resources :rentals
+  resources :cards
+  resources :cars
+  resources :positions
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
