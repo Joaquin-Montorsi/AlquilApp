@@ -73,3 +73,7 @@ end
 
 
 gem "hirb"
+gem "httparty"
+
+
+gem "sorcery"

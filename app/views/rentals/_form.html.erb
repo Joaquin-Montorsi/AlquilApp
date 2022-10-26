@@ -1,3 +1,11 @@
+<%
+@driver = params[:driver]
+
+%>
+
+
+
+
 <%= form_with(model: rental) do |form| %>
   <% if rental.errors.any? %>
     <div style="color: red">
@@ -22,13 +30,11 @@
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id %>
+    <%= form.hidden_field params[:user_id] %>
   </div>
 
   <div>
-    <%= form.label :car_id, style: "display: block" %>
-    <%= form.number_field :car_id %>
+    <%= form.hidden_field params[:car_id]%>
   </div>
 
   <div>
