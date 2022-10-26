@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
-    def current_user
-        return unless session[:user_id]
-        @current_user ||= User.find(session[:user_id])
+    before_action :require_login
+
+    private
+    def not_authenticated
+        redirect_to login_path, alert: "Please login first"
     end
 end

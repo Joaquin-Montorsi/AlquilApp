@@ -8,7 +8,7 @@ class SorceryCore < ActiveRecord::Migration[7.0]
       t.integer :rol
       t.string :name
       t.string :lastName
-      t.integer :document         null: false, index: { unique: true }
+      t.integer :document,        null: false, index: { unique: true }
       t.boolean :state
       t.string :license_url
       t.string :blueCard_url
