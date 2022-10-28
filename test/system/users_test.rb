@@ -14,7 +14,8 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New user"
 
-    fill_in "liscenceExpires", with: @user.liscenceExpires
+    fill_in "balance", with: @user.balance
+    fill_in "licenceExpires", with: @user.licenceExpires
     fill_in "Crypted password", with: @user.crypted_password
     fill_in "Document", with: @user.document
     fill_in "Email", with: @user.email
@@ -34,7 +35,8 @@ class UsersTest < ApplicationSystemTestCase
     visit user_url(@user)
     click_on "Edit this user", match: :first
 
-    fill_in "liscenceExpires", with: @user.liscenceExpires
+    fill_in "balance", with: @user.balance
+    fill_in "licenceExpires", with: @user.licenceExpires
     fill_in "Crypted password", with: @user.crypted_password
     fill_in "Document", with: @user.document
     fill_in "Email", with: @user.email

@@ -9,9 +9,10 @@ class SorceryCore < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :lastName
       t.integer :document,        null: false, index: { unique: true }
+      t.float :balance
       t.boolean :state
       t.string :license_url
-      t.datetime :liscenceExpires
+      t.datetime :licenceExpires
       
 
       t.timestamps                null: false

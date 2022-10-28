@@ -68,9 +68,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_28_190942) do
     t.string "name"
     t.string "lastName"
     t.integer "document", null: false
+    t.float "balance"
     t.boolean "state"
     t.string "license_url"
-    t.datetime "liscenceExpires"
+    t.datetime "licenceExpires"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["document"], name: "index_users_on_document", unique: true

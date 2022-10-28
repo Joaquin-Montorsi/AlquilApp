@@ -17,7 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference("User.count") do
-      post users_url, params: { user: { liscenceExpires: @user.liscenceExpires, crypted_password: @user.crypted_password, document: @user.document, email: @user.email, lastName: @user.lastName, license_url: @user.license_url, name: @user.name, rol: @user.rol, salt: @user.salt, state: @user.state } }
+      post users_url, params: { user: { balance: @user.balance, licenceExpires: @user.licenceExpires, crypted_password: @user.crypted_password, document: @user.document, email: @user.email, lastName: @user.lastName, license_url: @user.license_url, name: @user.name, rol: @user.rol, salt: @user.salt, state: @user.state } }
     end
 
     assert_redirected_to user_url(User.last)
@@ -34,7 +34,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    patch user_url(@user), params: { user: { liscenceExpires: @user.liscenceExpires, crypted_password: @user.crypted_password, document: @user.document, email: @user.email, lastName: @user.lastName, license_url: @user.license_url, name: @user.name, rol: @user.rol, salt: @user.salt, state: @user.state } }
+    patch user_url(@user), params: { user: { balance: @user.balance, licenceExpires: @user.licenceExpires, crypted_password: @user.crypted_password, document: @user.document, email: @user.email, lastName: @user.lastName, license_url: @user.license_url, name: @user.name, rol: @user.rol, salt: @user.salt, state: @user.state } }
     assert_redirected_to user_url(@user)
   end
 

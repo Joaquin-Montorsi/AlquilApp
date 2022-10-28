@@ -47,6 +47,11 @@
   </div>
 
   <div>
+    <%= form.label :balance, style: "display: block" %>
+    <%= form.number_field :balance %>
+  </div>
+
+  <div>
     <%= form.label :state, style: "display: block" %>
     <%= form.number_field :state %>
   </div>
@@ -57,8 +62,8 @@
   </div>
 
   <div>
-    <%= form.label :liscenceExpires, style: "display: block" %>
-    <%= form.text_field :liscenceExpires %>
+    <%= form.label :licenceExpires, style: "display: block" %>
+    <%= form.date_field :licenceExpires %>
   </div>
 
   <div>
