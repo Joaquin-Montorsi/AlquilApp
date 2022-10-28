@@ -65,6 +65,6 @@ class PositionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def position_params
-      params.require(:position).permit(:x, :y)
+      params.require(:position).permit(:x, :y, :user_id, :car_id)
     end
 end

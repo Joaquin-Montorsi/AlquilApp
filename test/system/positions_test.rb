@@ -14,6 +14,8 @@ class PositionsTest < ApplicationSystemTestCase
     visit positions_url
     click_on "New position"
 
+    fill_in "Car", with: @position.car_id
+    fill_in "User", with: @position.user_id
     fill_in "X", with: @position.x
     fill_in "Y", with: @position.y
     click_on "Create Position"
@@ -26,6 +28,8 @@ class PositionsTest < ApplicationSystemTestCase
     visit position_url(@position)
     click_on "Edit this position", match: :first
 
+    fill_in "Car", with: @position.car_id
+    fill_in "User", with: @position.user_id
     fill_in "X", with: @position.x
     fill_in "Y", with: @position.y
     click_on "Update Position"

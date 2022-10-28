@@ -17,7 +17,7 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create car" do
     assert_difference("Car.count") do
-      post cars_url, params: { car: { brand: @car.brand, color: @car.color, doors: @car.doors, engine: @car.engine, fuel: @car.fuel, img_url: @car.img_url, license: @car.license, model: @car.model, position_id: @car.position_id, seats: @car.seats, state: @car.state } }
+      post cars_url, params: { car: { brand: @car.brand, color: @car.color, doors: @car.doors, engine: @car.engine, fuel: @car.fuel, img_url: @car.img_url, license: @car.license, model: @car.model, seats: @car.seats, state: @car.state } }
     end
 
     assert_redirected_to car_url(Car.last)
@@ -34,7 +34,7 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update car" do
-    patch car_url(@car), params: { car: { brand: @car.brand, color: @car.color, doors: @car.doors, engine: @car.engine, fuel: @car.fuel, img_url: @car.img_url, license: @car.license, model: @car.model, position_id: @car.position_id, seats: @car.seats, state: @car.state } }
+    patch car_url(@car), params: { car: { brand: @car.brand, color: @car.color, doors: @car.doors, engine: @car.engine, fuel: @car.fuel, img_url: @car.img_url, license: @car.license, model: @car.model, seats: @car.seats, state: @car.state } }
     assert_redirected_to car_url(@car)
   end
 

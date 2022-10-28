@@ -14,14 +14,13 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New user"
 
-    fill_in "Bluecard url", with: @user.blueCard_url
+    fill_in "liscenceExpires", with: @user.liscenceExpires
     fill_in "Crypted password", with: @user.crypted_password
     fill_in "Document", with: @user.document
     fill_in "Email", with: @user.email
     fill_in "Lastname", with: @user.lastName
     fill_in "License url", with: @user.license_url
     fill_in "Name", with: @user.name
-    fill_in "Position", with: @user.position_id
     fill_in "Rol", with: @user.rol
     fill_in "Salt", with: @user.salt
     fill_in "State", with: @user.state
@@ -35,14 +34,13 @@ class UsersTest < ApplicationSystemTestCase
     visit user_url(@user)
     click_on "Edit this user", match: :first
 
-    fill_in "Bluecard url", with: @user.blueCard_url
+    fill_in "liscenceExpires", with: @user.liscenceExpires
     fill_in "Crypted password", with: @user.crypted_password
     fill_in "Document", with: @user.document
     fill_in "Email", with: @user.email
     fill_in "Lastname", with: @user.lastName
     fill_in "License url", with: @user.license_url
     fill_in "Name", with: @user.name
-    fill_in "Position", with: @user.position_id
     fill_in "Rol", with: @user.rol
     fill_in "Salt", with: @user.salt
     fill_in "State", with: @user.state

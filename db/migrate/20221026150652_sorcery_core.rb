@@ -11,8 +11,7 @@ class SorceryCore < ActiveRecord::Migration[7.0]
       t.integer :document,        null: false, index: { unique: true }
       t.boolean :state
       t.string :license_url
-      t.string :blueCard_url
-      t.integer :position_id
+      t.datetime :liscenceExpires
       
 
       t.timestamps                null: false

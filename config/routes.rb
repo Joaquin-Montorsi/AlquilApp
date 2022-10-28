@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :positions
   root :to => 'users#index'
 
   get 'login' => 'user_sessions#new', :as => :login
@@ -10,5 +11,4 @@ Rails.application.routes.draw do
   resources :rentals
   resources :cards
   resources :cars
-  resources :positions
 end

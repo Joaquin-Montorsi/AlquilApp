@@ -1,4 +1,4 @@
 class Position < ApplicationRecord
-    has_one :user
-    has_one :car
+    belongs_to :user
+    belongs_to :car
 end

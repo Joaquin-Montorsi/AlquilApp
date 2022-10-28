@@ -11,7 +11,6 @@ class CreateCars < ActiveRecord::Migration[7.0]
       t.integer :state
       t.boolean :engine
       t.integer :fuel
-      t.integer :position_id
 
       t.timestamps
     end

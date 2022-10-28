@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_26_150652) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_28_190942) do
   create_table "cards", force: :cascade do |t|
     t.integer "cardNumber"
     t.date "expires"
@@ -30,7 +30,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_150652) do
     t.integer "state"
     t.boolean "engine"
     t.integer "fuel"
-    t.integer "position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_150652) do
   create_table "positions", force: :cascade do |t|
     t.float "x"
     t.float "y"
+    t.integer "user_id"
+    t.integer "car_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -69,8 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_150652) do
     t.integer "document", null: false
     t.boolean "state"
     t.string "license_url"
-    t.string "blueCard_url"
-    t.integer "position_id"
+    t.datetime "liscenceExpires"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["document"], name: "index_users_on_document", unique: true

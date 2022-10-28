@@ -43,7 +43,6 @@ class CarsTest < ApplicationSystemTestCase
     fill_in "Img url", with: @car.img_url
     fill_in "License", with: @car.license
     fill_in "Model", with: @car.model
-    fill_in "Position", with: @car.position_id
     fill_in "Seats", with: @car.seats
     fill_in "State", with: @car.state
     click_on "Update Car"
