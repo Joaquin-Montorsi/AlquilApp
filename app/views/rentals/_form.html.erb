@@ -4,8 +4,6 @@
 %>
 
 
-
-
 <%= form_with(model: rental) do |form| %>
   <% if rental.errors.any? %>
     <div style="color: red">
@@ -19,14 +17,11 @@
     </div>
   <% end %>
 
+  <% @duration %>
+  
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div>
-    <%= form.label :expires, style: "display: block" %>
-    <%= form.datetime_field :expires %>
+    <%= form.label @duration, style: "display: block" %>
+    <%= form.number_field %>
   </div>
 
   <div>

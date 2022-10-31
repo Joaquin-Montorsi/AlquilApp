@@ -1,6 +1,6 @@
 class RentalsController < ApplicationController
-  before_action :set_rental, only: %i[ show edit update destroy ]
-
+  before_action :set_rental, only: %i[ show edit update destroy]
+  
   # GET /rentals or /rentals.json
   def index
     @rentals = Rental.all
@@ -21,7 +21,7 @@ class RentalsController < ApplicationController
 
   # POST /rentals or /rentals.json
   def create
-    @rental = Rental.new(rental_params)
+    @rental = Rental.new(rental_paramsx)
 
     respond_to do |format|
       if @rental.save

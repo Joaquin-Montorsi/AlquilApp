@@ -27,8 +27,13 @@
   </div>
 
   <div>
-    <%= form.label :rol, style: "display: block" %>
-    <%= form.number_field :rol %>
+    
+    <% if current_user && current_user.rol == 1 %>
+      
+      <% else %>
+      
+    <% end %>
+    
   </div>
 
   <div>
@@ -49,11 +54,6 @@
   <div>
     <%= form.label :balance, style: "display: block" %>
     <%= form.number_field :balance %>
-  </div>
-
-  <div>
-    <%= form.label :state, style: "display: block" %>
-    <%= form.number_field :state %>
   </div>
 
   <div>
